@@ -1,1 +1,40 @@
+version: '3'
+services:
+  chatgpt-retrieval-plugin:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '5000:5000'
+    environment:
+      - PORT=5000
+      - DATASTORE=weaviate
+    networks:
+      - chatgpt-weaviate-net
+    restart: always
 
+  weaviate:
+    command:
+      - --host
+      - 0.0.0.0
+      - --port
+      - '8080'
+      - --scheme
+      - http
+    image: semitechnologies/weaviate:1.18.0
+    ports:
+      - 8080:8080
+    restart: always
+    environment:
+      QUERY_DEFAULTS_LIMIT: 25
+      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: 'true'
+      PERSISTENCE_DATA_PATH: '/var/lib/weaviate'
+      DEFAULT_VECTORIZER_MODULE: 'none'
+      ENABLE_MODULES: ''
+      CLUSTER_HOSTNAME: 'node1'
+      DATASTORE: weaviate
+    networks:
+      - chatgpt-weaviate-net
+
+networks:
+  chatgpt-weaviate-net:
