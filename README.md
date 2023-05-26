@@ -1,6 +1,6 @@
 # ChatGPT Retrieval Plugin
 
-> **This Fork of chatgpt-retrieval-plugin has sucessfully tested and running on Oracle Free Tier - Ubuntu 22.04 with ARM64 **
+> **This Fork of chatgpt-retrieval-plugin has sucessfully tested and running on Oracle Free Tier - Ubuntu 22.04 with ARM64**
 # Running the chatgpt-retrieval-plugin Docker container
 
 Follow these steps to run the `chatgpt-retrieval-plugin` Docker container on an Ubuntu system.
@@ -23,11 +23,11 @@ Before you begin, make sure Port 5000 is Open to access connection, Docker and D
 
    sudo nano docker-compose.yml
    
-4. **Now you can build and start the Docker containers using Docker Compose. The -d flag is for running the containers in the background **
+4. **Now you can build and start the Docker containers using Docker Compose. The -d flag is for running the containers in the background**
 
    docker-compose up -d
    
-5. **Access the chatgpt-retrieval-plugin on your host URL **
+5. **Access the chatgpt-retrieval-plugin on your host URL**
 
    http://your_host_ip:5000
 
