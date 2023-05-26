@@ -1,7 +1,19 @@
 # ChatGPT Retrieval Plugin
 
 > **This Fork of chatgpt-retrieval-plugin has sucessfully tested and running on Oracle Free Tier - Ubuntu 22.04 with ARM64 **
+# Running the chatgpt-retrieval-plugin Docker container
 
+Follow these steps to run the `chatgpt-retrieval-plugin` Docker container on an Ubuntu system.
+
+## Prerequisites
+
+Before you begin, make sure Docker and Docker Compose are installed on your Ubuntu system. If not, you can follow the official Docker installation guide for Ubuntu [here](https://docs.docker.com/engine/install/ubuntu/) and Docker Compose installation guide [here](https://docs.docker.com/compose/install/).
+
+## Steps
+
+1. **Clone the Repository**
+
+   git clone https://github.com/BusTopGamer/chatgpt-retrieval-plugin-docker-Weaviate-selfhosted
 Find an example video of a Retrieval Plugin that has access to the UN Annual Reports from 2018 to 2022 [here](https://cdn.openai.com/chat-plugins/retrieval-gh-repo-readme/Retrieval-Final.mp4).
 
 ## Introduction
