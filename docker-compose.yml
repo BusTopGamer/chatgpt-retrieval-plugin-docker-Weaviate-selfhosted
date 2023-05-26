@@ -1,4 +1,4 @@
-# read "readme2.txt"
+# Important: Update OPENAI_API_KEY & BEARER_TOKEN with your actaul key and random token before deploying Containers.
 version: '3.8'
 services:
   chatgpt-retrieval-plugin:
@@ -11,6 +11,8 @@ services:
       PORT: 5000
       DATASTORE: weaviate
       WEAVIATE_URL: http://weaviate:8081
+      OPENAI_API_KEY: Your_api_key
+      BEARER_TOKEN: Your_random_token
     networks:
       - chatgpt-weaviate-net
     restart: always
@@ -36,6 +38,8 @@ services:
       CLUSTER_HOSTNAME: 'node1'
       DATASTORE: weaviate
       WEAVIATE_URL: http://weaviate:8081
+      OPENAI_API_KEY: Your_api_key
+      BEARER_TOKEN: Your_random_token
     networks:
       - chatgpt-weaviate-net
 
