@@ -1,6 +1,6 @@
 # ChatGPT Retrieval Plugin
 
-> **This Fork of chatgpt-retrieval-plugin has sucessfully tested for running on Oracle Free Tier Ubuntu 22.04 With ARM64 **
+> **This Fork of chatgpt-retrieval-plugin has sucessfully tested and running on Oracle Free Tier - Ubuntu 22.04 with ARM64 **
 
 Find an example video of a Retrieval Plugin that has access to the UN Annual Reports from 2018 to 2022 [here](https://cdn.openai.com/chat-plugins/retrieval-gh-repo-readme/Retrieval-Final.mp4).
 
