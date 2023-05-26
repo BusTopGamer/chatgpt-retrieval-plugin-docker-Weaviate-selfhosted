@@ -8,4 +8,4 @@ local_server/
 *.md
 *.pyc
 .dockerignore
-
+Dockerfile
