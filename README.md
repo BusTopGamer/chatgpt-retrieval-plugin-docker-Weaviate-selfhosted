@@ -24,6 +24,7 @@ Before you begin, make sure Port 5000 is Open to access connection, Docker and D
    sudo nano docker-compose.yml
    
    BEARER_TOKEN: Your_token
+   
    OPENAI_API_KEY: Your_Key
    
 4. **Now you can build and start the Docker containers using Docker Compose. The -d flag is for running the containers in the background **
