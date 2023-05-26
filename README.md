@@ -7,13 +7,33 @@ Follow these steps to run the `chatgpt-retrieval-plugin` Docker container on an 
 
 ## Prerequisites
 
-Before you begin, make sure Docker and Docker Compose are installed on your Ubuntu system. If not, you can follow the official Docker installation guide for Ubuntu [here](https://docs.docker.com/engine/install/ubuntu/) and Docker Compose installation guide [here](https://docs.docker.com/compose/install/).
+Before you begin, make sure Port 5000 is Open to access connection, Docker and Docker Compose are installed on your system. If not, you can follow the official Docker installation guide for Ubuntu [here](https://docs.docker.com/engine/install/ubuntu/) and Docker Compose installation guide [here](https://docs.docker.com/compose/install/).
 
 ## Steps
 
 1. **Clone the Repository**
 
    git clone https://github.com/BusTopGamer/chatgpt-retrieval-plugin-docker-Weaviate-selfhosted
+
+2. **go to directory**
+
+   cd chatgpt-retrieval-plugin-docker-Weaviate-selfhosted
+   
+3. **Edit docker-compose.yml and Update your BEARER_TOKEN and OPENAI_API_KEY**
+
+   sudo nano docker-compose.yml
+   
+   BEARER_TOKEN: Your_token
+   OPENAI_API_KEY: Your_Key
+   
+4. **Now you can build and start the Docker containers using Docker Compose. The -d flag is for running the containers in the background **
+
+   docker-compose up -d
+   
+5. **Access the chatgpt-retrieval-plugin on your host URL **
+
+   http://your_host_ip:5000
+
 Find an example video of a Retrieval Plugin that has access to the UN Annual Reports from 2018 to 2022 [here](https://cdn.openai.com/chat-plugins/retrieval-gh-repo-readme/Retrieval-Final.mp4).
 
 ## Introduction
