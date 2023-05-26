@@ -1,3 +1,4 @@
+# read "readme2.txt"
 version: '3'
 services:
   chatgpt-retrieval-plugin:
