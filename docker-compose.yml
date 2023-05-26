@@ -1,5 +1,5 @@
 # read "readme2.txt"
-version: '2'
+version: '3.8'
 services:
   chatgpt-retrieval-plugin:
     build: 
@@ -8,8 +8,9 @@ services:
     ports:
       - '5000:5000'
     environment:
-      - PORT=5000
-      - DATASTORE=weaviate
+      PORT: 5000
+      DATASTORE: weaviate
+      WEAVIATE_URL: http://127.0.0.1:8081
     networks:
       - chatgpt-weaviate-net
     restart: always
@@ -19,21 +20,22 @@ services:
       - --host
       - 0.0.0.0
       - --port
-      - '8080'
+      - '8081'
       - --scheme
       - http
     image: semitechnologies/weaviate:1.18.0
     ports:
-      - 8080:8080
+      - '8081:8080'
     restart: always
     environment:
       QUERY_DEFAULTS_LIMIT: 25
-      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: 'true'
+      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: true
       PERSISTENCE_DATA_PATH: '/var/lib/weaviate'
       DEFAULT_VECTORIZER_MODULE: 'none'
       ENABLE_MODULES: ''
       CLUSTER_HOSTNAME: 'node1'
       DATASTORE: weaviate
+      WEAVIATE_URL: http://127.0.0.1:8081
     networks:
       - chatgpt-weaviate-net
 
