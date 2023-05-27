@@ -40,6 +40,8 @@ services:
       WEAVIATE_URL: http://weaviate:8081
       OPENAI_API_KEY: Your_api_key
       BEARER_TOKEN: Your_random_token
+    volumes:
+      - /var/weaviate:/var/lib/weaviate
     networks:
       - chatgpt-weaviate-net
 
