@@ -30,6 +30,10 @@ Before you begin, make sure Port 5000 is Open to access connection, Docker and D
 5. **Access the chatgpt-retrieval-plugin on your host URL**
 
    http://your_host_ip:5000
+   
+6. **Open AI requires serverhosted plugin url to have HTTPS**
+
+   You have to use any reverse proxy, just make https://your-plugin.site to http://your_host_ip:5000
 
 Find an example video of a Retrieval Plugin that has access to the UN Annual Reports from 2018 to 2022 [here](https://cdn.openai.com/chat-plugins/retrieval-gh-repo-readme/Retrieval-Final.mp4).
 
